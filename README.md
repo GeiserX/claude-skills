@@ -1,8 +1,8 @@
 # claude-skills
 
 Open-source [Claude Code](https://claude.com/claude-code) skills — reusable, self-contained
-autonomous workflows you drop into `~/.claude/skills/` (personal) or a project's `.claude/skills/`
-and invoke as slash commands. The directory name becomes the command.
+autonomous loops you drop into `~/.claude/skills/` (personal) or a project's `.claude/skills/` and
+invoke as slash commands. The directory name becomes the command.
 
 ## Skills
 
@@ -41,17 +41,9 @@ until the goal holds — logging to a worklog and parking genuine human-only cal
 /sergio-loop coordinate <directive>    # multi-session mode
 ```
 
-### `/git-sync` — commit, rebase, push
-Commit all workspace changes, pull with rebase, resolve the straightforward conflicts, and push. A
-one-command "sync my branch with remote."
-
-```
-/git-sync
-```
-
-> `sergio-loop` and `refine-loop` lean on the **oh-my-claudecode (OMC)** skill layer for persistence
-> and the `/research!` · `/implement!` · `/review-pr!` sub-steps; `refine-loop` also degrades to a
-> self-contained loop without OMC.
+> Both loops lean on the **oh-my-claudecode (OMC)** skill layer for persistence and the `/research!`
+> · `/implement!` · `/review-pr!` sub-steps; `refine-loop` also degrades to a self-contained loop
+> without OMC.
 
 ## Install
 
