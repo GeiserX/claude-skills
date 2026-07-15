@@ -129,6 +129,14 @@ every commit**.
 6. **Commit** (conventional commits; keep CI green; PR workflow if the repo requires it), then loop
    back to step 1.
 
+   **Run DISCOVER as a `Workflow` (Claude Code default; this instruction is the
+   opt-in):** `parallel(lenses.map(l => () => agent(lensAudit(l), {schema:
+   CANDIDATES})))` plus a judge agent scoring Impact×Confidence÷Effort per
+   candidate — lens coverage becomes checkable from the run result instead of
+   trusted. EXECUTE stays in the main thread (one improvement at a time,
+   rollback-on-regression). **Portability:** without `Workflow` (e.g. Codex CLI),
+   audit the four lenses sequentially each round.
+
 ## Step 5 — when to stop (the diminishing-returns predicate)
 Check the counters — which live in `REFINE-BACKLOG.md`, not in your head — at the end of every round.
 **Stop when ANY of these holds:**
